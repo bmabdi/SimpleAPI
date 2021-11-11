@@ -14,7 +14,7 @@ namespace SimpleApi.Test
         public void TestMethod1()
         {
             IEnumerable<WeatherForecast> returnValue = weatherForecastController.Get();
-            Assert.AreNotSame(-7, returnValue.ToList().OrderBy(c => c.TemperatureC).ElementAt(0).TemperatureC);
+            Assert.AreEqual(-7, returnValue.ToList().OrderBy(c => c.TemperatureC).ElementAt(0).TemperatureC);
         }
     }
 }
